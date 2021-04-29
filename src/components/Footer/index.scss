@@ -1,0 +1,6 @@
+@import '../../assets/styles/mixins.scss';
+
+.footer-wrapper{
+    @include flex-row;
+    @include vh-center;
+}

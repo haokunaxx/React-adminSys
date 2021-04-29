@@ -1,0 +1,35 @@
+.login-wrapper{
+    height: 100%;
+    width: 100%;
+    .login-header{
+        display: flex;
+        align-items: center;
+        height: 80px;
+        // line-height: 80px;
+
+        padding: 10px;
+
+        border-bottom: 1px solid #ddd;
+        // background: #eee;
+        color: #2c82fd;
+        font-size: 30px;
+    }
+
+    .login-form{
+        width: 400px;
+        height: 280px;
+        margin: 100px auto;
+        padding: 20px;
+
+        border: 1px solid #ddd;
+        .form-header{
+            height: 40px;
+
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .ant-btn.ant-btn-primary.ant-btn-block{
+            margin-top: 20px;
+        }
+    }
+}

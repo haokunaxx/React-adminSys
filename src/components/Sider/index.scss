@@ -1,0 +1,13 @@
+@import '../../assets/styles/mixins.scss';
+
+.sider-wrapper{
+    .sys-name{
+        @include flex-row;
+        @include vh-center;
+
+        height: 60px;
+
+        font-size: 24px;
+        color: #fff;
+    }
+}

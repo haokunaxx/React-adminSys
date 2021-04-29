@@ -1,0 +1,20 @@
+@import '../../assets/styles/mixins.scss';
+
+.header-wrapper{
+    @include flex-row;
+    @include vh-center;
+    height: 100%;
+    .header-temp{
+        height: 100%;
+        flex: 1;
+    }
+    .header-menu{
+        min-width: 20%;
+        @include flex-row;
+        @include vh-center;
+        color: #fff;
+        p{
+            margin: 0 20px 0 0;
+        }
+    }
+}
