@@ -248,3 +248,31 @@ Modal组件显示提示
 ```
 
 #### 2. 
+
+...忘记保存 下次补全。
+
+# day03 商品管理页面的开发
+
+## 页面布局
+
+![image-20210516171726170](/MDPics/image-20210516171726170.png)
+
+## 一些注意的点：
+
+#### **使用到的antd的组件**
+
+​	Card、Table、Select、Input、Switch、Button、Icon
+
+#### **分页为后台分页**
+
+#### **搜索接口和查询接口整合为一个接口**
+
+#### **受控组件的封装**
+
+​	根据name属性。
+
+#### tableInfo中设置className用于使表格Column项居中显示
+
+​	样式设置 text-align:center;
+
+#### 搜索时重置Table的pagination属性的curPage值

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,forwardRef } from 'react';
 
 import PropTypes from 'prop-types';
 
@@ -7,7 +7,9 @@ const { Option } = Select;
 const { Item } = Form;
 
 
-const AddForm = (props) => {
+// const AddForm = forwardRef((props,ref) => {
+const AddForm = (props)=>{
+  // console.log(ref);
   const { formHook, cateList, parentName, parentId} = props;
 
   const [data,setData] = useState(parentId === '0' ? cateList : []);    //搜索时显示
@@ -74,6 +76,7 @@ const AddForm = (props) => {
     </>
   );
 };
+
 
 AddForm.propTypes = {
   cateList:PropTypes.array.isRequired,

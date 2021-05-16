@@ -1,16 +1,17 @@
-import {Component} from 'react';
+import {Component } from 'react';
 
 import {Table, Button, Modal, Card, message } from 'antd';
 
 import TableInner from './components/TableInner';   //Table的操作栏
 import CardTitle from './components/CardTitle';     //卡片头部（面包屑导航）
 import UpdateForm from './components/updateForm';   //更新分类表单
-import AddForm from './components/addForm';         //添加分类表单
+import AddForm from './components/addForm_ref';         //添加分类表单
 
 import './index.scss';
 
 import {addCate, getCateList, updateCate} from '../../../api';
 
+// const addFormRef = createRef();
 export default class Category extends Component{
     state = {
         cateList:[],    //分类数据
@@ -20,10 +21,13 @@ export default class Category extends Component{
         breadcrumbArr:[],
         isModalVisible:false,
         defaultValue:'',
-        modalStatus:null
+        modalStatus:null,
+
+
+        // addFormRef:createRef()
     }
     componentDidMount(){
-        // console.log(this)
+        console.log(this)
         this.getCateList();
     }
     // 获取列表数据
@@ -66,7 +70,6 @@ export default class Category extends Component{
 
     handleOk = async () => {
         if(this.state.modalStatus === 'add'){
-            
             const categoryName = this.form.getFieldValue('categoryName');
 
             const res = await addCate({
@@ -107,6 +110,7 @@ export default class Category extends Component{
         })
     }
     render(){
+        // console.log('---',addFormRef);
         const tableInfo = [
             {
                 title: '分类名称',
@@ -154,7 +158,6 @@ export default class Category extends Component{
                         pagination={{defaultPageSize:6}}
                     />;
                 </Card>
-
                 <Modal title={this.state.modalStatus === 'edit' ? '更新分类' : '添加分类'}
                     destroyOnClose = {true}
                     visible={this.state.isModalVisible} 
